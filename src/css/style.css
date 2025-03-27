@@ -210,6 +210,7 @@ body {
     font-size: 16px;
     color: #343a40;
     padding-right: 0 !important;
+    padding-top: 76px;
 }
 
 h1,
@@ -918,6 +919,77 @@ html {
     border: none;
     -webkit-box-shadow: 0 5px 20px rgba(52, 58, 64, 0.1);
     box-shadow: 0 5px 20px rgba(52, 58, 64, 0.1);
+}
+
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #0d6efd;
+}
+
+body {
+    padding-top: 76px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 0.5rem;
+}
+
+.navbar .nav-link {
+    color: #6c757d;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #0d6efd;
+}
+
+.navbar-toggler {
+    padding: 0.5rem;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
 }
 
 .navbar-custom {

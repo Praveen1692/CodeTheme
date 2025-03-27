@@ -78,6 +78,10 @@ const App = () => {
     setActiveIndex(index);
   };
 
+  const handleNavClick = (link) => {
+    setActiveLink(link);
+  };
+
   // Automatic sliding effect
   useEffect(() => {
     const interval = setInterval(() => {
@@ -105,64 +109,23 @@ const App = () => {
     <div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
       {/* Navbar */}
 
-
-      <nav
-        className="navbar navbar-expand-lg navbar-light py-3"
-        style={{
-          background: "linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)",
+      <nav className="navbar navbar-expand-lg fixed-top" style={{
+          background: "white",
           boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
-          position: "sticky",
-          top: 0,
-          zIndex: 1000,
-        }}
-      >
+      }}>
         <div className="container">
-          <img src="https://coderthemes.com/dojek/layouts/images/logo-dark.png" alt="" srcset="" />
-          <a
-            className="navbar-brand d-flex align-items-center"
-            href="/"
-            style={{ transition: "transform 0.3s" }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-          >
-           
+          <a className="navbar-brand" href="#">
+            <img src="https://coderthemes.com/dojek/layouts/images/logo-dark.png" alt="Logo" height="30" />
           </a>
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div className="navbar-nav ms-auto">
             <ul className="navbar-nav">
               {navLinks.map((link) => (
-                <li key={link} className="nav-item mx-2">
+                <li key={link} className="nav-item">
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className={`nav-link ${
-                      activeLink === link ? "text-primary fw-bold" : "text-muted"
-                    }`}
-                    onClick={() => setActiveLink(link)}
-                    style={{
-                      padding: "10px 20px",
-                      borderRadius: "25px",
-                      transition: "all 0.3s ease",
-                      backgroundColor: activeLink === link ? "rgba(0, 123, 255, 0.1)" : "transparent",
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.backgroundColor = "rgba(0, 123, 255, 0.15)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.backgroundColor =
-                        activeLink === link ? "rgba(0, 123, 255, 0.1)" : "transparent")
-                    }
+                    className={`nav-link ${activeLink === link ? "active" : ""}`}
+                    onClick={() => handleNavClick(link)}
                   >
                     {link}
                   </a>
@@ -172,7 +135,6 @@ const App = () => {
           </div>
         </div>
       </nav>
-     
 
       {/* Hero Section */}
 
@@ -318,14 +280,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-      
 
       {/* About Section */}
       <section className="section bg-light" id="about" style={{ padding: "80px 0" }}>
