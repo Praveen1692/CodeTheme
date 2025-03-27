@@ -8,70 +8,81 @@ import "./css/style.css";
 const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeLink, setActiveLink] = useState("Home");
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const navLinks = ["Home", "About", "Projects", "Testimonial", "Team"];
 
   const designs = [
     {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/1.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/1.jpg",
+      title: "Creative Design",
       category: "Design",
     },
     {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/2.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/2.jpg",
+      title: "Digital Marketing",
+      category: "Digital",
+    },
+    {
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/3.jpg",
+      title: "Photography Art",
+      category: "Photography",
+    },
+    {
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/4.jpg",
+      title: "Creative Artwork",
+      category: "Creative",
+    },
+    {
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/5.jpg",
+      title: "Web Design",
       category: "Design",
     },
     {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/1.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
-      category: "Design",
-    },
-    {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/3.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
-      category: "Design",
-    },
-    {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/5.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
-      category: "Design",
-    },
-    {
-      image:
-        "https://coderthemes.com/dojek/layouts/images/agency/project-img/4.jpg", // Replace with actual image URL
-      title: "The Language of Designs",
-      category: "Design",
+      image: "https://coderthemes.com/dojek/layouts/images/agency/project-img/6.jpg",
+      title: "Digital Content",
+      category: "Digital",
     },
   ];
 
   const testimonials = [
     {
-      quote:
-        "Excellent support for a tricky issue related to our customization of the template.",
-      name: "Brightlight Books",
-      role: "Ubold Customer",
-      image: "https://coderthemes.com/dojek/layouts/images/users/user-1.jpg", // Replace with actual image URL
+      quote: "Excellent work! The team delivered beyond our expectations.",
+      name: "John Anderson",
+      role: "CEO, TechCorp",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-1.jpg",
     },
     {
-      quote:
-        "This kit provides many options which I can use everyday. It's great work.",
-      name: "Echineo",
-      role: "Ubold Customer",
-      image: "https://coderthemes.com/dojek/layouts/images/users/user-2.jpg", // Replace with actual image URL
+      quote: "The design quality and innovative solutions provided.",
+      name: "Sarah Williams",
+      role: "Marketing Director",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-2.jpg",
     },
     {
-      quote:
-        "This is a very extensive web app kit that can serve all kinds of purposes.",
-      name: "Aebra Schultz",
-      role: "Designer",
-      image: "https://coderthemes.com/dojek/layouts/images/users/user-2.jpg", // Replace with actual image URL
+      quote: "Outstanding service and results! ",
+      name: "Michael Chen",
+      role: "Product Manager",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-3.jpg",
     },
+    {
+      quote: "Excellent work out.",
+      name: "John Anderson",
+      role: "CEO, TechCorp",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-1.jpg",
+    },
+    {
+      quote: "The design quality and innovative ",
+      name: "Sarah Williams",
+      role: "Marketing Director",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-2.jpg",
+    },
+    {
+      quote: "Outstanding service and results! .",
+      name: "Michael Chen",
+      role: "Product Manager",
+      image: "https://coderthemes.com/dojek/layouts/images/users/user-3.jpg",
+    },
+    
   ];
 
   const handleDotClick = (index) => {
@@ -321,154 +332,201 @@ const App = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
+       {/* Projects Section */}
+<section className="section bg-light" id="projects" style={{ padding: "80px 0" }}>
+  <div className="container">
+    <div className="row justify-content-center mb-5">
+      <div className="col-lg-7 text-center">
+        <h4 className="text-muted">Our Projects</h4>
+        <h2 className="fw-bold mb-5">A great design brings thousands of great results.</h2>
+        <div className="d-flex flex-wrap justify-content-center gap-2">
+          <button
+            type="button"
+            className={`btn ${activeFilter === "All" ? "btn-primary" : "btn-outline-secondary"}`}
+            onClick={() => setActiveFilter("All")}
+          >
+            All
+          </button>
+          <button
+            type="button"
+            className={`btn ${activeFilter === "Design" ? "btn-primary" : "btn-outline-secondary"}`}
+            onClick={() => setActiveFilter("Design")}
+          >
+            Design
+          </button>
+          <button
+            type="button"
+            className={`btn ${activeFilter === "Creative" ? "btn-primary" : "btn-outline-secondary"}`}
+            onClick={() => setActiveFilter("Creative")}
+          >
+            Creative
+          </button>
+          <button
+            type="button"
+            className={`btn ${activeFilter === "Digital" ? "btn-primary" : "btn-outline-secondary"}`}
+            onClick={() => setActiveFilter("Digital")}
+          >
+            Digital
+          </button>
+          <button
+            type="button"
+            className={`btn ${activeFilter === "Photography" ? "btn-primary" : "btn-outline-secondary"}`}
+            onClick={() => setActiveFilter("Photography")}
+          >
+            Photography
+          </button>
+        </div>
+      </div>
+    </div>
 
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-8 col-lg-6 text-center">
-              <h6 class="subtitle">Our Projects</h6>
-              <h2 class="title">
-                A great design brings thousands of great results.
-              </h2>
-            </div>
-          </div>
-
-          <div className="row mt-3">
-            <div className="col text-center">
-              <div
-                className="btn-group"
-                role="group"
-                aria-label="Gallery Filters"
-              >
-                <button type="button" className="btn btn-primary active">
-                  All Items
-                </button>
-                <button type="button" className="btn btn-outline-secondary">
-                  Design
-                </button>
-                <button type="button" className="btn btn-outline-secondary">
-                  Creative
-                </button>
-                <button type="button" className="btn btn-outline-secondary">
-                  Digital
-                </button>
-                <button type="button" className="btn btn-outline-secondary">
-                  Photography
-                </button>
+    <div className="container-fluid">
+      <div className="row">
+        {designs
+          .filter((design) => activeFilter === "All" || design.category === activeFilter)
+          .map((design, index) => (
+            <div key={index} className="col-md-4 p-3">
+              <div className="card border-0 project-card">
+                <img
+                  src={design.image}
+                  alt={design.title}
+                  className="card-img-top rounded"
+                  style={{
+                    objectFit: "cover",
+                    height: "300px",
+                  }}
+                />
+                <div className="card-body px-0">
+                  <h5 className="card-title mb-0">{design.title}</h5>
+                  <p className="text-muted">{design.category}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="container-fluid">
-            <div className="row">
-              {designs.map((design, index) => (
-                <div key={index} className="col-md-4 p-3">
-                  <div className="card border-0">
-                    <img
-                      src={design.image}
-                      alt={design.title}
-                      className="card-img-top rounded"
-                      style={{
-                        objectFit: "cover",
-                        height: "300px",
-                        backgroundColor:
-                          index === 0
-                            ? "#00B4D8"
-                            : index === 1
-                              ? "#E9ECEF"
-                              : "#FFC300",
-                      }}
-                    />
-                    <div className="card-body px-0">
-                      <h5 className="card-title">{design.title}</h5>
-                      <p className="card-text text-muted">{design.category}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Section */}
-      <section className="section testi-bg" id="testimonial">
-        <div className="container">
-          <div className="row justify-content-center mb-5">
-            <div className="col-md-8 col-lg-6 text-center">
-              <h6 className="subtitle text-dark">Testimonial</h6>
-              <h2 className="title">Client Feedback</h2>
-              <p className="text-muted">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut consequuntur magni dolores.
-              </p>
-            </div>
-          </div>
+      <section className="section bg-ll" id="testimonial" style={{ padding: "80px 0" }}>
+  <div className="container">
+    <div className="row justify-content-center mb-5">
+      <div className="col-lg-7 text-center">
+        <h4 className="text-muted">Testimonials</h4>
+        <h2 className="fw-bold">What Our Clients Say</h2>
+        <h3 className="text-muted">
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut consequuntur magni dolores.
+        </h3>
+      </div>
+    </div>
 
-          <div className="container-fluid bg-light py-5">
-            <div className="row justify-content-center">
-              <div className="col-lg-8">
-                <div className="card border-0 shadow-sm">
-                  <div className="card-body text-center p-5 position-relative">
-                    <div className="row align-items-center">
-                      <div className="col-3 text-end">
+    {/* Carousel */}
+    <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, groupIndex) => (
+          <div
+            key={groupIndex}
+            className={`carousel-item ${groupIndex === 0 ? "active" : ""}`}
+          >
+            <div className="row">
+              {testimonials
+                .slice(groupIndex * 3, groupIndex * 3 + 3)
+                .map((testimonial, index) => (
+                  <div key={index} className="col-lg-4">
+                    <div className="card border-0 shadow-sm p-4 mb-4" style={{ height: "350px" ,width:"350px"}}>
+                      <div className="text-center mb-4">
                         <img
-                          src={testimonials[activeIndex].image}
-                          alt={testimonials[activeIndex].name}
+                          src={testimonial.image}
+                          alt={testimonial.name}
                           className="rounded-circle"
                           style={{
                             width: "80px",
                             height: "80px",
                             objectFit: "cover",
-                            transition: "opacity 0.5s ease-in-out",
+                            border: "3px solid #1ce1ac",
+                            padding: "3px",
                           }}
                         />
                       </div>
-                      <div className="col-9 text-start">
-                        <blockquote className="blockquote mb-0">
-                          <p
-                            className="fs-5 fst-italic"
-                            style={{ transition: "opacity 0.5s ease-in-out" }}
-                          >
-                            "{testimonials[activeIndex].quote}"
-                          </p>
-                          <footer className="blockquote-footer">
-                            {testimonials[activeIndex].name},
-                            <cite className="text-muted">
-                              {" "}
-                              {testimonials[activeIndex].role}
-                            </cite>
-                          </footer>
-                        </blockquote>
+                      <div className="text-center">
+                        <p className="text-muted mb-4" style={{ lineHeight: "1.8" }}>
+                          <i
+                            className="mdi mdi-format-quote-open text-primary h3 d-block mb-2"
+                            style={{ color: "#1ce1ac !important" }}
+                          ></i>
+                          {testimonial.quote}
+                        </p>
+                        <h5 className="mb-1" style={{ color: "#2c3e50" }}>
+                          {testimonial.name}
+                        </h5>
+                        <p className="text-muted mb-0">{testimonial.role}</p>
                       </div>
-                    </div>
-
-                    {/* Carousel Indicators */}
-                    <div className="mt-4 d-flex justify-content-center">
-                      {testimonials.map((_, index) => (
-                        <button
-                          key={index}
-                          className={`btn rounded-circle mx-2 ${index === activeIndex ? "btn-primary" : "btn-light"
-                            }`}
-                          style={{
-                            width: "10px",
-                            height: "10px",
-                            padding: 0,
-                            border: "none",
-                            transition: "background-color 0.3s",
-                          }}
-                          onClick={() => handleDotClick(index)}
-                        />
-                      ))}
                     </div>
                   </div>
-                </div>
-              </div>
+                ))}
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      {/* Carousel Controls */}
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+
+      {/* Dots Indicator */}
+      <div className="text-center mt-4">
+        {Array.from({ length: Math.ceil(testimonials.length / 3) }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`btn rounded-circle mx-2 ${
+              index === activeIndex ? "btn-primary" : "btn-light"
+            }`}
+            style={{
+              width: "12px",
+              height: "12px",
+              border: "none",
+              padding: "0",
+            }}
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide-to={index}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Counter Section */}
       <section className="section bg-light">
@@ -524,17 +582,17 @@ const App = () => {
                 role: "Web Designer, USA",
               },
               {
-                img: "https://coderthemes.com/dojek/layouts/images/agency/team/1.png",
+                img: "https://coderthemes.com/dojek/layouts/images/agency/team/4.png",
                 name: "Ronnie Cooper",
                 role: "Graphic Designer, USA",
               },
               {
-                img: "https://coderthemes.com/dojek/layouts/images/agency/team/1.png",
+                img: "https://coderthemes.com/dojek/layouts/images/agency/team/3.png",
                 name: "Adela White",
                 role: "Web Designer, USA",
               },
               {
-                img: "https://coderthemes.com/dojek/layouts/images/agency/team/1.png",
+                img: "https://coderthemes.com/dojek/layouts/images/agency/team/2.png",
                 name: "Ronnie Cooper",
                 role: "Graphic Designer, USA",
               },
@@ -542,7 +600,7 @@ const App = () => {
               <div key={index} className="col-sm-6 col-lg-3">
                 <div className="team-bg rounded text-center">
                   <img
-                    src={`https://coderthemes.com/dojek/layouts/images/agency/team/1.png`}
+                    src={`https://coderthemes.com/dojek/layouts/images/agency/team/2.png`}
                     alt=""
                     className="img-fluid"
                   />

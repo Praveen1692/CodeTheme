@@ -171,6 +171,11 @@
 
 .bg-light {
     background-color: #f8f9fa !important;
+   
+}
+
+.bg-ll{
+    background-color: rgba(255, 194, 18, 0.25);
 }
 
 .bg-soft-light {
@@ -921,6 +926,16 @@ html {
     box-shadow: 0 5px 20px rgba(52, 58, 64, 0.1);
 }
 
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
 .navbar {
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -1189,6 +1204,7 @@ body {
     background-image: url("../images/footer-light-bg.png");
     background-repeat: no-repeat;
     background-position: bottom;
+   
 }
 
 .footer .cta-content {
@@ -1620,6 +1636,93 @@ body {
     .hero-6 {
         padding: 130px 0 90px;
     }
+}
+
+.project-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline-secondary {
+    border-color: #dee2e6;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #1ce1ac;
+    border-color: #1ce1ac;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #1ce1ac;
+    border-color: #1ce1ac;
+}
+
+.btn-primary:hover {
+    background-color: #18c89b;
+    border-color: #18c89b;
+}
+
+.testimonial-carousel {
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.testimonial-card .card {
+    background: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.testimonial-card .mdi-format-quote-open,
+.testimonial-card .mdi-format-quote-close {
+    color: #1ce1ac;
+    opacity: 0.3;
+    font-size: 24px;
+    margin: 0 4px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+   
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #1ce1ac;
+}
+
+.mdi-format-quote-open {
+    color: #1ce1ac !important;
+    opacity: 0.2;
+    font-size: 48px;
+}
+
+.btn-primary {
+    background-color: #1ce1ac;
+    border-color: #1ce1ac;
+}
+
+.btn-primary:hover {
+    background-color: #18c89b;
+    border-color: #18c89b;
+}
+
+.btn-light {
+    background-color: #e9ecef;
+    border-color: #e9ecef;
 }
 
 /*# sourceMappingURL=style.css.map */
