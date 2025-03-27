@@ -110,8 +110,8 @@ const App = () => {
       {/* Navbar */}
 
       <nav className="navbar navbar-expand-lg fixed-top" style={{
-          background: "white",
-          boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+        background: "white",
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
       }}>
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -149,30 +149,18 @@ const App = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div
-                className="hero-title-badge mb-3"
-                style={{
-                  backgroundColor: "#007bff",
-                  color: "#fff",
-                  padding: "8px 16px",
-                  borderRadius: "20px",
-                  display: "inline-block",
-                  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-                }}
-              >
-                <span className="text-white">70% off </span> for first 3 months
-              </div>
+             
               <h1
                 className="hero-title fw-bold mb-4"
                 style={{ fontSize: "48px", lineHeight: "1.2", color: "#2c3e50" }}
               >
-                Digital Agency with Excellence Services
+                We are Creative Web  <span style={{ color: "#1ce1ac" }}>Design Agency</span>
               </h1>
               <p
                 className="text-muted mb-5 fs-18"
                 style={{ fontSize: "18px", lineHeight: "1.8", color: "#7f8c8d" }}
               >
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.
+                Aenean vulputate eleifend tellus eenean a ligula porttitor consequat vitae eleifend ac enim eliquam ante dapibus.
               </p>
               <div className="d-flex align-items-center mb-4 mb-lg-0">
                 <a
@@ -193,20 +181,9 @@ const App = () => {
                     e.currentTarget.style.boxShadow = "none";
                   }}
                 >
-                  More About Us <i className="mdi mdi-chevron-right ms-1"></i>
+                  Learn More <i className="mdi mdi-chevron-right ms-1"></i>
                 </a>
-                <a
-                  href="#"
-                  className="text-secondary d-flex align-items-center"
-                  data-bs-toggle="modal"
-                  data-bs-target="#watchvideomodal"
-                  style={{ fontSize: "18px", transition: "color 0.3s" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#007bff")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "#6c757d")}
-                >
-                  See Live Demo{" "}
-                  <i className="mdi mdi-motion-play-outline h1 mb-0 ms-2"></i>
-                </a>
+                
                 <div
                   className="modal fade bd-example-modal-lg"
                   id="watchvideomodal"
@@ -237,14 +214,10 @@ const App = () => {
             </div>
             <div className="col-lg-6">
               <img
-                src="https://coderthemes.com/dojek/layouts/images/agency/hero-img.png"
+                src="https://coderthemes.com/dojek/layouts/images/heros/hero-2-img.png"
                 alt=""
                 className="img-fluid"
-                style={{
-                  borderRadius: "15px",
-                  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
-                  transition: "transform 0.3s",
-                }}
+
                 onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
@@ -403,8 +376,8 @@ const App = () => {
                           index === 0
                             ? "#00B4D8"
                             : index === 1
-                            ? "#E9ECEF"
-                            : "#FFC300",
+                              ? "#E9ECEF"
+                              : "#FFC300",
                       }}
                     />
                     <div className="card-body px-0">
@@ -476,9 +449,8 @@ const App = () => {
                       {testimonials.map((_, index) => (
                         <button
                           key={index}
-                          className={`btn rounded-circle mx-2 ${
-                            index === activeIndex ? "btn-primary" : "btn-light"
-                          }`}
+                          className={`btn rounded-circle mx-2 ${index === activeIndex ? "btn-primary" : "btn-light"
+                            }`}
                           style={{
                             width: "10px",
                             height: "10px",
