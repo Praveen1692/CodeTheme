@@ -600,7 +600,7 @@ const App = () => {
               <div key={index} className="col-sm-6 col-lg-3">
                 <div className="team-bg rounded text-center">
                   <img
-                    src={`https://coderthemes.com/dojek/layouts/images/agency/team/2.png`}
+                    src={member.img}
                     alt=""
                     className="img-fluid"
                   />
@@ -612,6 +612,22 @@ const App = () => {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Footer Section */}
       <section className="footer bg-light">
